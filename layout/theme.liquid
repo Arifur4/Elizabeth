@@ -18,9 +18,9 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    {% if page_description %}
+    {%- if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
+    {% endif -%}
 
     <!-- {% render 'meta-tags' %} -->
 
@@ -32,7 +32,7 @@
     <!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script> -->
   </head>
   <body>
-    {% section 'header' %}
+    {%- section 'header' -%}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
