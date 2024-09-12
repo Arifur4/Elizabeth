@@ -10,6 +10,13 @@
       <!-- NAVIGATION MENU -->
       <div class="hidden md:flex space-x-10">
         {% for link in section.settings.menu.links %}
+          {% if link.links != blank %}
+            <div class="relative">
+              <button class="inline-flex item-center">
+                {{ link.title }}
+              </button>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
       <!-- CART BUTTON / ACCOUNT LINKS IF ENABLED -->
