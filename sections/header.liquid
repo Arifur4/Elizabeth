@@ -91,7 +91,20 @@
         {% endif %}
       </div>
 
-      <!-- MOBILE MENU ICON -->
+      <!-- MOBILE MENU CONTAINER -->
+      <div x-show="mobileMenuOpen" class="absolute z-10 top-0 inset-x-0 p-2 transform origin-top-left md:hidden">
+        <div class="shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 bg-white w-4">
+          <div class="p-5 divide-y2 divide-gray-50">
+            <!-- MOBILE MENU HEADER TITLE AND CLOSE BUTTON -->
+            <div class="flex items-center justify-between pb-3">
+              <div>
+                <h1 class="text-lg text-gray-500">{{ section.settings.mobile_menu_title }}</h1>
+              </div>
+            </div>
+            <!-- NAVIGATION LINKS FOR MOBILE MENU -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -100,6 +113,11 @@
 {
   "name": "Header",
   "settings": [
+    {
+      "type": "text",
+      "id": "mobile_menu_title",
+      "label": "Mobile Menu Title"
+    },
     {
       "type": "link_list",
       "id": "menu",
